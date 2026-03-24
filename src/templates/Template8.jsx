@@ -37,8 +37,8 @@ function TemplateCreativeCard({ data }) {
       padding: "15px",
       borderRadius: "10px",
       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-      wordBreak: "break-word",        // ✅ added
-      overflowWrap: "break-word",     // ✅ added
+      wordBreak: "break-word",        
+      overflowWrap: "break-word",     
     },
     tag: {
       display: "inline-block",
@@ -69,7 +69,7 @@ function TemplateCreativeCard({ data }) {
       {about && (
         <div style={{ ...styles.card, margin: "20px" }}>
           <h3>About Me</h3>
-          <p style={{ margin: 0, whiteSpace: "pre-wrap" }}> {/* ✅ added */}
+          <p style={{ margin: 0, whiteSpace: "pre-wrap" }}> 
             {about}
           </p>
         </div>
@@ -117,7 +117,7 @@ function TemplateCreativeCard({ data }) {
                 {p.name && <strong>{p.name}</strong>}
 
                 {p.description && (
-                  <p style={{ margin: 0, whiteSpace: "pre-wrap" }}> {/* ✅ added */}
+                  <p style={{ margin: 0, whiteSpace: "pre-wrap" }}> 
                     {p.description}
                   </p>
                 )}

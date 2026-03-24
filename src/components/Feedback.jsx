@@ -19,17 +19,17 @@ function Feedback() {
       return;
     }
 
-    // Close instantly
+    // Close 
     setOpen(false);
     
 
     emailjs.send(
-      "service_xlekhf7",   // 🔁 replace this
-      "template_cvqrcyp",  // 🔁 replace this
+      "service_xlekhf7",   
+      "template_cvqrcyp",  
       {
         message: message,
       },
-      "S6DVeEG2gFzVeI9q7"    // 🔁 replace this
+      "S6DVeEG2gFzVeI9q7"   
     ).then(
       () => {
         alert("Feedback sent successfully!");

@@ -64,13 +64,13 @@ body {
   border-radius: 8px;
 }
 
-/* 🔥 FIX: Force strong, visible text for PDF */
+/*  Force strong, visible text for PDF */
 #cv-preview * {
   color: #000 !important;
   opacity: 1 !important;
 }
 
-/* 🔥 Improve section titles visibility */
+/* Improve section titles visibility */
 #cv-preview h1,
 #cv-preview h2,
 #cv-preview h3 {
@@ -226,13 +226,13 @@ body {
 }
 
 
-/* ✅ Prevent breaking inside important blocks */
+/*  Prevent breaking inside important blocks */
 .pdf-safe * {
   page-break-inside: avoid;
   break-inside: avoid;
 }
 
-/* ✅ Force clean page behavior */
+/*  Force clean page behavior */
 .pdf-safe {
   width: 794px;            /* A4 width in px */
   min-height: 1123px;      /* A4 height */
@@ -240,7 +240,7 @@ body {
   background: white;
 }
 
-/* ✅ Avoid weird splits in sections */
+/*  Avoid weird splits in sections */
 .pdf-safe h1,
 .pdf-safe h2,
 .pdf-safe h3,
@@ -251,7 +251,7 @@ body {
   page-break-inside: avoid;
 }
 
-/* ✅ Optional: better spacing when page breaks */
+/*  Optional: better spacing when page breaks */
 .pdf-safe h2 {
   page-break-after: avoid;
 }

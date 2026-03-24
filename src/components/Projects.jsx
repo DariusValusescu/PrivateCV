@@ -5,7 +5,7 @@ function Projects({ projects, setProjects }) {
   const addProject = () => {
     setProjects([
       ...projects,
-      { name: "", description: "", link: "" } // ✅ added link
+      { name: "", description: "", link: "" } 
     ]);
   };
 
@@ -41,7 +41,7 @@ function Projects({ projects, setProjects }) {
           />
           <br />
 
-          {/* ✅ NEW: Link input */}
+          {/*  Link input */}
           <input
             placeholder="Project Link (optional)"
             value={proj.link || ""}

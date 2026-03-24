@@ -17,7 +17,7 @@ function Template1({ data }) {
         </div>
       </div>
 
-      {/* ✅ About Me */}
+      {/*  About Me */}
       {about && (
         <div style={{ maxWidth: "600px", margin: "20px auto", wordBreak: "break-word", overflowWrap: "break-word" }}>
           <h2>About Me</h2>
@@ -35,7 +35,7 @@ function Template1({ data }) {
         <h2 style={{ marginTop: "20px" }}>Experience</h2>
         {experience.map((job, i) => <p key={i}>{job.role} - {job.company}</p>)}
 
-        {/* ✅ Projects */}
+        {/*  Projects */}
         {projects?.some(p => p.name || p.description || p.link) && (
           <>
             <h2 style={{ marginTop: "20px" }}>Projects</h2>

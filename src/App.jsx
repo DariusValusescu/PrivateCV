@@ -32,11 +32,11 @@ function App() {
   const [languages, setLanguages] = useState([]);
   const [template, setTemplate] = useState("template1");
 
-  // ✅ NEW STATE (only addition)
+
   const [about, setAbout] = useState("");
   const [projects, setProjects] = useState([]);
 
-  // Image states
+
   const [photo, setPhoto] = useState(null);
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
@@ -109,7 +109,7 @@ function App() {
       setPhoto(data.photo || null);
       setTemplate(data.template || "template1");
 
-      // ✅ NEW LOAD
+    
       setAbout(data.about || "");
       setProjects(data.projects || []);
     };
@@ -133,7 +133,7 @@ function App() {
     }).save();
   };
 
-  // ✅ IMPORTANT: added about + projects
+  
   const cvData = { personalData, experience, education, skills, languages, photo, about, projects };
   return (
     <>
@@ -208,10 +208,10 @@ function App() {
         </div>
       )}
 
-      {/* Forms */}
+      
       <PersonalInfo data={personalData} setData={setPersonalData} />
 
-      {/* ✅ NEW */}
+      
       <AboutMe about={about} setAbout={setAbout} />
 
       <Experience experience={experience} setExperience={setExperience} />
@@ -219,7 +219,7 @@ function App() {
       <Skills skills={skills} setSkills={setSkills} title="Skills" />
       <Skills skills={languages} setSkills={setLanguages} title="Languages" />
 
-      {/* ✅ NEW */}
+      
       <Projects projects={projects} setProjects={setProjects} />
 
       {/* Preview */}
