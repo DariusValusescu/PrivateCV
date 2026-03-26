@@ -81,7 +81,7 @@ function Feedback() {
             boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
           }}
         >
-          <h3 style={{ marginTop: 0 }}>Feedback</h3>
+          <h3 style={{ marginTop: 0,color: "#202727"}}>Feedback</h3>
 
           <textarea
             placeholder="Write your feedback..."
@@ -91,8 +91,21 @@ function Feedback() {
               width: "100%",
               height: "90px",
               marginBottom: "10px",
-              padding: "5px",
+              padding: "8px",
+              
+              color: "#fff",
+              background: "#0000",
+              frontSize: "14px",
+              lineHeight: "1.5",
+
+              border:"1px solid #ccc",
+              borderRadius: "6px",
+
+              caretColor: "#fff",
+              outline: "none",
+
               resize: "none",
+
             }}
           />
 

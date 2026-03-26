@@ -21,6 +21,8 @@ import Template8 from "./templates/Template8";
 import Template9 from "./templates/Template9";
 
 import "./App.css";
+import HowToUse from "./components/HowToUse";
+import WhatsNew from "./components/WhatsNew";
 
 
 
@@ -143,8 +145,30 @@ function App() {
       {/* Controls */}
       <div className="controls">
         <button onClick={saveData}>Save</button>
-        <input type="file" onChange={loadData} />
-        <button onClick={exportPDF}>Export PDF</button>
+        <label
+            style={{
+              padding: "8px 12px",
+              background: "#5d7fa3",
+              color: "white",
+              borderRadius: "6px",
+              cursor: "pointer",
+              marginRight: "10px",
+              display: "inline-block"
+            }}
+          >
+            Load json file
+            <input
+              type="file"
+              accept=".json"
+              onChange={loadData}
+              style={{ display: "none" }}
+            />
+          </label>
+
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <button onClick={exportPDF}>Export PDF</button>
+            <HowToUse />
+          </div>
       </div>
 
       {/* Template Selector */}
@@ -176,7 +200,25 @@ function App() {
       </div>
 
       {/* Photo upload */}
-      <input type="file" accept="image/*" onChange={handlePhotoUpload} />
+      <label
+          style={{
+            padding: "8px 12px",
+            background: "#5d7fa3",
+            color: "white",
+            borderRadius: "6px",
+            cursor: "pointer",
+            display: "inline-block",
+            marginBottom: "10px"
+          }}
+        >
+          Upload Photo
+          <input
+            type="file"
+            accept="image/*"
+            onChange={handlePhotoUpload}
+            style={{ display: "none" }}
+          />
+        </label>
 
       {/* Crop UI */}
       {showCrop && (
@@ -236,6 +278,7 @@ function App() {
       </div>
     </div>
     <Feedback/>
+    <WhatsNew/>
     </>
   );
 }
