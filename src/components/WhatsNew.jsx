@@ -42,13 +42,13 @@ function WhatsNew() {
           }}
         >
           <h3 style={{ marginTop: 0, color: "#aaa" }}>
-            Build 2
+            Build 3
           </h3>
 
           <div style={{ fontSize: "14px", lineHeight: "1.5", color: "#ccc" }}>
-            <p>Added What's New section</p>
-            <p>Improved button labels</p>
-            <p>Imporved feedback box</p>
+            <p>Fixed PDF export issue</p>
+            <p>Fixed a typo that prevented a template name from displaying</p>
+            <p>Added a new template</p>
 
           </div>
 

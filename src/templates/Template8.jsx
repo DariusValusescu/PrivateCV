@@ -7,10 +7,6 @@ function TemplateCreativeCard({ data }) {
     container: {
       fontFamily: "sans-serif",
       background: "#f0f2f5",
-      minHeight: "100%",
-      maxWidth: "900px",
-      margin: "0 auto",
-      overflow: "hidden", // ✅ added
     },
     header: {
       background: "#5d7fa3",
@@ -113,7 +109,7 @@ function TemplateCreativeCard({ data }) {
 
           {projects.map((p, i) => (
             (p.name || p.description || p.link) && (
-              <div key={i} style={{ marginBottom: "10px" }}>
+              <div key={i} style={{ marginBottom: "10px",pageBreakInside: "avoid", breakInside: "block", display: "block" }}>
                 {p.name && <strong>{p.name}</strong>}
 
                 {p.description && (

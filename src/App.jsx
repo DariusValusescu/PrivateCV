@@ -9,7 +9,9 @@ import Skills from "./components/Skills";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Feedback from "./components/Feedback";
+import PDFSafeWrapper from "./components/PDFSafeWrapper";
 
+import TemplatePDFTest from "./templates/TemplatePDFTest";
 import Template1 from "./templates/Template1";
 import Template2 from "./templates/Template2";
 import Template3 from "./templates/Template3";
@@ -19,6 +21,7 @@ import Template6 from "./templates/Template6";
 import Template7 from "./templates/Template7";
 import Template8 from "./templates/Template8";
 import Template9 from "./templates/Template9";
+import Template10 from "./templates/Template10";
 
 import "./App.css";
 import HowToUse from "./components/HowToUse";
@@ -120,18 +123,38 @@ function App() {
 
   const exportPDF = () => {
     const element = document.getElementById("cv-preview");
-    html2pdf().from(element).set({
-      margin: 0.5,
+
+    html2pdf()
+    .from(element)
+    .set({
+      margin: 0,
       filename: "cv.pdf",
-      html2canvas: { scale: 2,
-        useCORS: true
+
+      html2canvas: { 
+        scale: 2,
+        useCORS: true,
+
+        width :element.scrollWidth,
+        height: element.scrollHeight,
+
+        scrollX: 0,
+        scrollY: -window.scrollY,
+
+
+
+        
        },
-      jsPDF: { unit: "in", format: "a4",
-        orientation:"portrait"
+       jsPDF: {
+        unit: "px",
+        format: [794, 1123],
+        orientation: "portrait"
        },
+
        pagebreak: {
-        mode: ["avoid-all", "css", "legacy"]
+        mode: ["css", "legacy"],
+        avoid: ["h3", "section", ".projects", ".project-items"]
        }
+    
     }).save();
   };
 
@@ -185,7 +208,9 @@ function App() {
             { key: "template6", label: "Elegant" },
             { key: "template7", label: "Professional" },
             { key: "template8", label: "Creative" },
-            { key: "template9", lable: "Bubble(!!EXPERIMENTAL!!"},
+            { key: "template9", label: "EXPERIMENTAL"},
+            { key: "template10", label: "Uniq"},
+            { key: "templatePDFTest", label: "pdftest"},
           ].map((t) => (
             <div
               key={t.key}
@@ -262,19 +287,26 @@ function App() {
       <Skills skills={languages} setSkills={setLanguages} title="Languages" />
 
       
-      <Projects projects={projects} setProjects={setProjects} />
+      <div className="projects-section">
+        <Projects projects={projects} setProjects={setProjects} />
+      </div>
 
       {/* Preview */}
       <div id="cv-preview" className="pdf-safe">
-        {template === "template1" && <Template1 data={cvData} />}
-        {template === "template2" && <Template2 data={cvData} />}
-        {template === "template3" && <Template3 data={cvData} />}
-        {template === "template4" && <Template4 data={cvData} />}
-        {template === "template5" && <Template5 data={cvData} />}
-        {template === "template6" && <Template6 data={cvData} />}
-        {template === "template7" && <Template7 data={cvData} />}
-        {template === "template8" && <Template8 data={cvData} />}
-        {template === "template9" && <Template9 data={cvData} />}
+        <div className="pdf-inner">
+          {template === "template1" && <Template1 data={cvData} />}
+          {template === "template2" && <Template2 data ={cvData} />}
+          {template === "template3" && <Template3 data ={cvData} />}
+          {template === "template4" && <Template4 data ={cvData} />}
+          {template === "template5" && <Template5 data ={cvData} />}
+          {template === "template6" && <Template6 data ={cvData} />}
+          {template === "template7" && <Template7 data ={cvData} />}
+          {template === "template8" && <Template8 data ={cvData} />}
+          {template === "template9" && <Template9 data ={cvData} />}
+          {template === "template10" && <Template10 data ={cvData} />}
+          
+          {template === "templatePDFTest" && <TemplatePDFTest data={cvData} />}
+        </div>
       </div>
     </div>
     <Feedback/>

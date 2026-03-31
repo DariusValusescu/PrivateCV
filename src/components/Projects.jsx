@@ -5,7 +5,7 @@ function Projects({ projects, setProjects }) {
   const addProject = () => {
     setProjects([
       ...projects,
-      { name: "", description: "", link: "" } 
+      { name: "", description: "", link: "" }
     ]);
   };
 
@@ -22,38 +22,52 @@ function Projects({ projects, setProjects }) {
   };
 
   return (
-    <div style={{ marginBottom: "20px" }}>
+    <div className="projects-wrapper">
+
       <h2>Projects</h2>
 
-      {projects.map((proj, idx) => (
-        <div key={idx} style={{ marginBottom: "10px" }}>
-          <input
-            placeholder="Project Name"
-            value={proj.name}
-            onChange={(e) => updateProject(idx, "name", e.target.value)}
-          />
-          <br />
+      <div className="projects-editor">
+        {projects.map((proj, idx) => (
+          <div key={idx} className="project-editor-item">
+            <input
+              placeholder="Project Name"
+              value={proj.name}
+              onChange={(e) => updateProject(idx, "name", e.target.value)}
+            />
 
-          <textarea
-            placeholder="Description"
-            value={proj.description}
-            onChange={(e) => updateProject(idx, "description", e.target.value)}
-          />
-          <br />
+            <textarea
+              placeholder="Description"
+              value={proj.description}
+              onChange={(e) => updateProject(idx, "description", e.target.value)}
+              rows={3}
+            />
 
-          {/*  Link input */}
-          <input
-            placeholder="Project Link (optional)"
-            value={proj.link || ""}
-            onChange={(e) => updateProject(idx, "link", e.target.value)}
-          />
-          <br />
+            <input
+              placeholder="Project Link (optional)"
+              value={proj.link || ""}
+              onChange={(e) => updateProject(idx, "link", e.target.value)}
+            />
 
-          <button onClick={() => removeProject(idx)}>Remove</button>
-        </div>
-      ))}
+            <button onClick={() => removeProject(idx)}>
+              Remove
+            </button>
+          </div>
+        ))}
+      </div>
 
       <button onClick={addProject}>Add Project</button>
+
+      {/* PRINT MODE (THIS IS WHAT PDF USES) */}
+      <div className="projects-print">
+        {projects.map((proj, idx) => (
+          <div key={idx} className="project-item">
+            <h3>{proj.name}</h3>
+            <p>{proj.description}</p>
+            {proj.link && <p>{proj.link}</p>}
+          </div>
+        ))}
+      </div>
+
     </div>
   );
 }
