@@ -42,13 +42,11 @@ function WhatsNew() {
           }}
         >
           <h3 style={{ marginTop: 0, color: "#aaa" }}>
-            Build 3
+            Build 4
           </h3>
 
           <div style={{ fontSize: "14px", lineHeight: "1.5", color: "#ccc" }}>
-            <p>Fixed PDF export issue</p>
-            <p>Fixed a typo that prevented a template name from displaying</p>
-            <p>Added a new template</p>
+            <p>Added Date of birht in Personal info section, but is optional</p>
 
           </div>
 

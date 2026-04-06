@@ -17,6 +17,7 @@ function Template2({ data }) {
         <h3>{personalData.name}</h3>
         <p>{personalData.email}</p>
         <p>{personalData.phone}</p>
+        {personalData.birthday && (<p>Date of birth{" "}{personalData.birthday}</p>)}
 
         <h4>Skills</h4>
         <ul style={{ listStyleType: "none", padding: 0 }}>

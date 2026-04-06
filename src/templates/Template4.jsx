@@ -18,6 +18,7 @@ function Template4({ data }) {
           <h2 style={{ margin: 0 }}>{personalData.name}</h2>
           <p style={{ margin: 0 }}>{personalData.email}</p>
           <p style={{ margin: 0 }}>{personalData.phone}</p>
+          {personalData.birthday && (<p>Date of birth{" "}{personalData.birthday}</p>)}
         </div>
       </div>
 

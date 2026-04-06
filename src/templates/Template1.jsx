@@ -14,6 +14,7 @@ function Template1({ data }) {
           <p><strong>{personalData.name}</strong></p>
           <p>{personalData.email}</p>
           <p>{personalData.phone}</p>
+          {personalData.birthday && (<p>Date of birth{" "}{personalData.birthday}</p>)}
         </div>
       </div>
 

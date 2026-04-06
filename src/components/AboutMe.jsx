@@ -6,7 +6,7 @@ function AboutMe({ about, setAbout }) {
       <h2>About Me</h2>
 
       <textarea
-        placeholder="Write something about yourself..."
+        placeholder="Write something about yourself...(Optonal)"
         value={about}
         onChange={(e) => setAbout(e.target.value)}
         rows={4}

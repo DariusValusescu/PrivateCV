@@ -42,6 +42,7 @@ function TemplateModernSidebar({ data }) {
         <h2>{personalData.name}</h2>
         <p>{personalData.email}</p>
         <p>{personalData.phone}</p>
+        {personalData.birthday && (<p>Date of birth{" "}{personalData.birthday}</p>)}
 
         {/* About Me */}
         {about && (

@@ -23,6 +23,7 @@ function TemplateMinimalClean({ data }) {
     <div style={styles.container}>
       <h1>{personalData.name}</h1>
       <p>{personalData.email} | {personalData.phone}</p>
+      {personalData.birthday && (<p>Date of birth{" "}{personalData.birthday}</p>)}
 
       {/* About Me */}
       {about && (

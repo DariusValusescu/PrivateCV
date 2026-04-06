@@ -28,6 +28,15 @@ function PersonalInfo({ data, setData }) {
         onChange={(e) => setData({ ...data, phone: e.target.value })}
       />
       <br />
+
+
+      <input
+        type="bday"
+        placeholder="BirthDay (OPTIONAL)"
+        value={data.birthday}
+        onChange={(e) => setData({ ...data, birthday: e.target.value })}
+      />
+      <br />
     </div>
   );
 }

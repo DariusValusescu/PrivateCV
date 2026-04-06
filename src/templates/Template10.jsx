@@ -40,6 +40,7 @@ function TemplateUniqueTimeline({ data }) {
           <p style={{ margin: "5px 0" }}>
             {personalData.email} | {personalData.phone}
           </p>
+          {personalData.birthday && (<p>Date of birth{" "}{personalData.birthday}</p>)}
         </div>
       </div>
 

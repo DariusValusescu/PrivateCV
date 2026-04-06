@@ -57,6 +57,7 @@ function TemplateCreativeCard({ data }) {
           <p style={{ marginTop: "8px" }}>
             {personalData.email} | {personalData.phone}
           </p>
+          {personalData.birthday && (<p>Date of birth{" "}{personalData.birthday}</p>)}
         </div>
 
         {photo && <img src={photo} alt="Profile" style={styles.photo} />}

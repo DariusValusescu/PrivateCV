@@ -114,6 +114,7 @@ function TemplateBubble({ data }) {
         <strong>{personalData.name}</strong>
         <p style={styles.text}>{personalData.email}</p>
         <p style={styles.text}>{personalData.phone}</p>
+        {personalData.birthday && (<p>Date of birth{" "}{personalData.birthday}</p>)}
       </div>
 
       {/* Projects (Bottom) */}

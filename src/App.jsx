@@ -30,7 +30,12 @@ import WhatsNew from "./components/WhatsNew";
 
 
 function App() {
-  const [personalData, setPersonalData] = useState({ name: "", email: "", phone: "" });
+  const [personalData, setPersonalData] = useState({ 
+    name: "", 
+    email: "", 
+    phone: "", 
+    birthday:"" 
+  });
   const [experience, setExperience] = useState([]);
   const [education, setEducation] = useState([]);
   const [skills, setSkills] = useState([]);
