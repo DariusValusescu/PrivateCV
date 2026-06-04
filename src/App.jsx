@@ -310,23 +310,8 @@ function App() {
           {template === "template9" && <Template9 data ={cvData} />}
           {template === "template10" && <Template10 data ={cvData} />}
           
-         
-
-          {showWatermark && (
-            <div
-              style={{
-                position: "absolute",
-                bottom: "15px",
-                right: "15px",
-                fontSize: "10px",
-                color: "#999",
-                opacity: 0.7,
-                pointerEvents: "none"
-              }}
-              >
-                Made with Private CV
-              <div>
-          )}
+        
+          )
         </div>
       </div>
     </div>
