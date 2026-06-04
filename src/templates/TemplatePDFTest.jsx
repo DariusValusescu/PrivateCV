@@ -93,7 +93,7 @@ function TemplatePDFTest() {
         <h2>About Section</h2>
         <p>
           This is a test paragraph to check spacing, overflow and PDF alignment.
-          If this text is cut, your export system is still broken.
+          
         </p>
       </div>
 
@@ -102,12 +102,12 @@ function TemplatePDFTest() {
 
         <div style={styles.box}>
           <h3>Left Box</h3>
-          <p>Testing grid layout alignment inside PDF export.</p>
+          <p>Testing grid alignment inside PDF export.</p>
         </div>
 
         <div style={styles.box}>
           <h3>Right Box</h3>
-          <p>This checks if right side gets cut or shifted.</p>
+         
         </div>
 
       </div>
@@ -125,16 +125,14 @@ function TemplatePDFTest() {
 
       {/* STRETCH TEST */}
       <div style={styles.section}>
-        <h2>Overflow Test</h2>
+        <h2>Overflow</h2>
 
         <p>
           0123456789 0123456789 0123456789 0123456789 0123456789
           0123456789 0123456789 0123456789 0123456789 0123456789
         </p>
 
-        <p>
-          If this text breaks or gets cut → export is still incorrect.
-        </p>
+      
       </div>
 
     </div>
